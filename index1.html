@@ -18,22 +18,24 @@
     }
 
     .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 40px; 
-  background-color: #CB242D;
-  z-index: 9999;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background-color: #CB242D;
+      z-index: 9999;
 
-  display: flex;              /* centra el contenido */
-  align-items: center;        /* centra vertical */
-  justify-content: center;    /* centra horizontal */
-  color: white;               /* texto visible */
-  font-size: 16px;            /* tamaño del texto */
-  font-weight: bold;          /* opcional */
-  font-family: Arial, sans-serif;
-}
+      /* Forzado de estilos de texto */
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: #ffffff !important;
+      font-size: 18px !important;
+      font-weight: bold !important;
+      font-family: Arial, sans-serif !important;
+      text-align: center !important;
+    }
 
     .container {
       position: relative;
@@ -58,6 +60,3 @@
   </div>
 </body>
 </html>
-
-
-
