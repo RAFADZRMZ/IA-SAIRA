@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IA SAIRA</title>
 
-  <!-- Meta tags para WhatsApp / Open Graph -->
   <meta property="og:title" content="Hoja Orli - IA SAIRA" />
   <meta property="og:description" content="Explora la Hoja Orli de IA SAIRA" />
   <meta property="og:image" content="https://rafadzrmz.github.io/IA-SAIRA/preview.jpg" />
@@ -15,36 +14,42 @@
     body {
       margin: 0;
       padding: 0;
+      overflow-x: hidden; /* evita scroll horizontal */
     }
 
     .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px; 
-  background-color: #CB242D;
-  z-index: 9999;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px; 
+      background-color: #CB242D;
+      z-index: 9999;
 
-  display: flex;              /* centra el contenido */
-  align-items: center;        /* centra vertical */
-  justify-content: center;    /* centra horizontal */
-  color: white;               /* texto visible */
-  font-size: 16px;            /* tamaño del texto */
-  font-weight: bold;          /* opcional */
-  font-family: Arial, sans-serif;
-}
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
 
     .container {
       position: relative;
-      width: 120%;
-      height: 120vh;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden; /* evita scroll dentro del container */
     }
 
     iframe {
       width: 100%;
       height: calc(100% - 50px);
       border: none;
+
+      transform: scale(1.1);        /* aumenta tamaño del contenido */
+      transform-origin: top center; /* lo centra horizontalmente */
+      display: block;               /* evita gaps por inline */
     }
   </style>
 </head>
@@ -58,12 +63,4 @@
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 
