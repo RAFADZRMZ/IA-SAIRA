@@ -53,6 +53,12 @@
       transform: scale(1.15);
       transform-origin: top center;
     }
+    /* NUEVO: solo para desktop */
+    @media (min-width: 768px) {
+      .overlay {
+        position: fixed; /* fija la barra sobre todo el contenido en desktop */
+      }
+    }
   </style>
 </head>
 <body>
@@ -65,4 +71,5 @@
   </div>
 </body>
 </html>
+
 
