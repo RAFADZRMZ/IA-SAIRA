@@ -5,205 +5,182 @@
   <title>Círculo COPARMEX | Vinculación Empresarial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
 
     body {
-      background: #0b1e3a;
-      color: white;
+      background: radial-gradient(circle at top, #0a1f44, #050b1a);
+      color: #ffffff;
       overflow-x: hidden;
     }
 
-    /* Fondo dinámico */
-    .bg {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at center, #0f2f5c, #071426);
-      z-index: -1;
-    }
-
-    header {
-      padding: 20px 40px;
+    /* NAVBAR */
+    .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 60px;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
-    header h1 {
-      font-size: 18px;
-      font-weight: 500;
-      letter-spacing: 1px;
+    .logo img {
+      height: 40px;
     }
 
-    header button {
-      background: transparent;
-      border: 1px solid #4da3ff;
-      color: #4da3ff;
-      padding: 8px 15px;
+    .nav-buttons button {
+      margin-left: 15px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: none;
       cursor: pointer;
+      font-weight: 600;
       transition: 0.3s;
     }
 
-    header button:hover {
-      background: #4da3ff;
-      color: #001f3f;
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #2f80ed;
+      color: #2f80ed;
+    }
+
+    .btn-outline:hover {
+      background: #2f80ed;
+      color: white;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2f80ed, #56ccf2);
+      color: white;
+      box-shadow: 0 4px 20px rgba(47,128,237,0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(47,128,237,0.6);
     }
 
     /* HERO */
     .hero {
-      height: 80vh;
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: center;
-      padding: 0 60px;
-      max-width: 900px;
+      height: 85vh;
+      text-align: center;
+      padding: 20px;
     }
 
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 20px;
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      max-width: 900px;
       line-height: 1.2;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 18px;
-      color: #b0c4de;
-      margin-bottom: 30px;
-    }
-
-    .hero button {
-      width: fit-content;
-      padding: 15px 30px;
-      font-size: 16px;
-      border: none;
-      background: #4da3ff;
-      color: #001f3f;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .hero button:hover {
-      transform: scale(1.05);
-    }
-
-    /* SECCIÓN SISTEMA */
-    .section {
-      padding: 80px 60px;
-    }
-
-    .section h3 {
-      font-size: 28px;
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      max-width: 700px;
       margin-bottom: 40px;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 25px;
+    .hero-buttons button {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
       transition: 0.3s;
     }
 
-    .card:hover {
-      border-color: #4da3ff;
-      transform: translateY(-5px);
+    .hero .btn-main {
+      background: linear-gradient(135deg, #2f80ed, #56ccf2);
+      color: white;
+      box-shadow: 0 6px 30px rgba(47,128,237,0.5);
     }
 
-    .card h4 {
-      margin-bottom: 10px;
+    .hero .btn-main:hover {
+      transform: scale(1.05);
     }
 
-    .card p {
-      color: #b0c4de;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .card button {
+    .hero .btn-secondary {
       background: transparent;
-      border: 1px solid #4da3ff;
-      color: #4da3ff;
-      padding: 8px 15px;
-      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
     }
 
-    footer {
+    .hero .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* FOOTER */
+    .footer {
       text-align: center;
-      padding: 30px;
-      font-size: 12px;
-      color: #8faed6;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
 
   </style>
+
+  <script>
+    function enConstruccion() {
+      alert("Esta funcionalidad está en construcción.");
+    }
+  </script>
+
 </head>
 
 <body>
 
-<div class="bg"></div>
-
-<header>
-  <h1>CÍRCULO COPARMEX | VINCULACIÓN EMPRESARIAL</h1>
-  <button onclick="msg()">Acceso</button>
-</header>
-
-<section class="hero">
-  <h2>La vinculación empresarial dejó de ser casual.</h2>
-  <p>Ahora es un sistema estructurado que diseña relaciones estratégicas con impacto real en el ecosistema empresarial.</p>
-  <button onclick="msg()">Entrar al sistema</button>
-</section>
-
-<section class="section">
-  <h3>Centro de Control de Vinculación</h3>
-
-  <div class="cards">
-
-    <div class="card">
-      <h4>Perfil Empresarial</h4>
-      <p>Define tus capacidades, necesidades y objetivos estratégicos.</p>
-      <button onclick="msg()">Acceder</button>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="https://share.google/1tfBhYqYGHBM2ebdK" alt="COPARMEX Logo">
     </div>
 
-    <div class="card">
-      <h4>Motor de Vinculación</h4>
-      <p>Conexiones dirigidas basadas en oportunidades reales.</p>
-      <button onclick="msg()">Acceder</button>
+    <div class="nav-buttons">
+      <button class="btn-outline" onclick="enConstruccion()">Acceso</button>
+      <button class="btn-primary" onclick="enConstruccion()">Entrar al Sistema</button>
     </div>
-
-    <div class="card">
-      <h4>Oportunidades</h4>
-      <p>Detecta alianzas, proyectos y relaciones clave.</p>
-      <button onclick="msg()">Acceder</button>
-    </div>
-
-    <div class="card">
-      <h4>Eventos Inteligentes</h4>
-      <p>Sesiones con vinculación estructurada, no networking.</p>
-      <button onclick="msg()">Acceder</button>
-    </div>
-
   </div>
-</section>
 
-<footer>
-  © 2026 Círculo COPARMEX de Vinculación Empresarial
-</footer>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>
+      La vinculación empresarial dejó de ser casual.<br>
+      Ahora es un sistema.
+    </h1>
 
-<script>
-  function msg() {
-    alert("Esta función está en construcción. Próximamente estará disponible.");
-  }
-</script>
+    <p>
+      Plataforma de articulación estratégica que conecta empresas, instituciones y oportunidades con precisión.
+      No es networking. Es diseño de relaciones que generan resultados.
+    </p>
+
+    <div class="hero-buttons">
+      <button class="btn-main" onclick="enConstruccion()">Entrar al Sistema</button>
+      <button class="btn-secondary" onclick="enConstruccion()">Explorar el Proyecto</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Círculo COPARMEX de Vinculación Empresarial © 2026
+  </div>
 
 </body>
 </html>
